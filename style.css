@@ -1,0 +1,102 @@
+:root {
+    --primary-gradient: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
+    --danger: #ef233c;
+    --success: #2b9348;
+    --bg: #f0f2f5;
+    --glass: rgba(255, 255, 255, 0.9);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    direction: rtl;
+}
+
+.container {
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    padding: 3rem 2rem;
+    border-radius: 25px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+    border: 1px solid white;
+}
+
+h1 { color: #1a1a1a; font-size: 2.2rem; margin-bottom: 5px; }
+.subtitle { color: #666; margin-bottom: 30px; }
+
+.search-box {
+    display: flex;
+    background: white;
+    padding: 5px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+input {
+    flex: 1;
+    border: none;
+    padding: 12px;
+    outline: none;
+    font-size: 1rem;
+}
+
+button {
+    background: var(--primary-gradient);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(67, 97, 238, 0.3);
+}
+
+button:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(67, 97, 238, 0.4); }
+
+.result-card {
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 15px;
+    display: none;
+    animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn { from { opacity: 0; scale: 0.9; } to { opacity: 1; scale: 1; } }
+
+/* التذييل مع اسمك وحسابك */
+.footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.dev-info {
+    font-size: 0.9rem;
+    color: #444;
+    margin-bottom: 12px;
+}
+
+.dev-info b { color: #4361ee; font-size: 1rem; }
+
+.telegram-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #0088cc;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+.telegram-btn:hover { background: #0077b5; }
