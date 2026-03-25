@@ -9,7 +9,7 @@ async function startScan() {
     btn.disabled = true;
 
     try {
-        const response = await fetch('http://localhost:3000/scan', {
+        const response = await fetch('https://ready-parks-juggle.loca.lt', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ url: url })
